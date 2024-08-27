@@ -156,7 +156,12 @@ SELECT * FROM EMPLOYEE WHERE Comm IS NULL
 SELECT Employee_Id, Last_Name FROM EMPLOYEE
 ORDER BY Employee_Id ASC
 
+  or
 
+SELECT Employee_Id, Last_Name FROM EMPLOYEE
+ORDER BY Employee_Id 
+
+  
 --2. List out the Employee ID and Name in descending order based on salary. 
 
 SELECT Employee_Id, CONCAT(FIRST_NAME,' ',MIDDLE_NAME,' ',LAST_NAME)AS Name,Salary FROM EMPLOYEE 
@@ -165,6 +170,11 @@ ORDER BY Salary DESC
 --3. List out the employee details according to their Last Name in ascending-order
 
 SELECT *FROM EMPLOYEE ORDER BY Last_Name ASC
+
+  or
+
+SELECT *FROM EMPLOYEE ORDER BY Last_Name
+
 
 --4. List out the employee details according to their Last Name in ascending order and then Department ID in descending order.
 
@@ -195,6 +205,7 @@ GROUP BY Job_Id
 SELECT COUNT(Employee_Id) AS emp_join_per_month,MONTH(Hire_Date) AS month_no FROM EMPLOYEE
 GROUP BY MONTH(Hire_Date)
 ORDER BY MONTH(Hire_Date) ASC
+  
 
 --4. List out the number of employees for each month and year in ascending order based on the year and month.
 
@@ -332,7 +343,7 @@ FROM EMPLOYEE
 ) 
 AS GradeTable
 GROUP BY Grade
-ORDER BY Grade
+ORDERÂ BYÂ Grade
 
 
 --3. Display the employee salary grades and the number of employees between 2000 to 5000 range of salary.
